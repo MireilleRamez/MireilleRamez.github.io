@@ -1,0 +1,80 @@
+// Chart1
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "data": {
+       "url": "https://raw.githubusercontent.com/MireilleRamez/MireilleRamez.github.io/refs/heads/main/US%20CO2%20Emission.csv"},
+
+
+    "title": {
+        "text": " USA Coal Industrial Sector Carbon Dioxide Emissions",
+        "subtitle": ["(EMISSCO2TOTVICCOA) Source: FRED https://fred.stlouisfed.org/series/EMISSCO2TOTVICCOA"],
+        "subtitleFontStyle":"italic",
+        "subtitleFontSize":10,
+        "anchor": "start",
+        "color": "black"},
+
+    "width":300,
+    "height":300,
+
+    "mark":{
+        "type": "line",
+        "color":"grey",
+        "strokeWidth":2,
+        "opacity":1},
+ 
+    "encoding": {
+      "x": {
+          "field": "Date",
+          "axis": {"grid": false},
+          "title":"",
+          "type": "temporal"},
+
+         
+      "y": {
+        "field": "CO2",
+          "axis": {"grid": false},
+          "title":"",
+          "type": "quantitative"},
+    }
+}
+
+// Chart 2
+  {  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+    "data": {
+       "url": "https://raw.githubusercontent.com/MireilleRamez/MireilleRamez.github.io/refs/heads/main/US%20Industrial%20Production.csv"},
+
+
+    "title": {
+        "text": " USA Industrial Production: Total Index ",
+        "subtitle": ["(INDPRO) Source: FRED https://fred.stlouisfed.org/series/INDPRO#0"],
+        "subtitleFontStyle":"italic",
+        "subtitleFontSize":10,
+        "anchor": "start",
+        "color": "black"},
+
+    "width":300,
+    "height":300,
+
+    "mark":{
+        "type": "line",
+        "color":"blue",
+        "strokeWidth":2,
+        "opacity":1},
+ 
+    "encoding": {
+      "x": {
+          "field": "Date",
+          "axis": {"grid": false},
+          "title":"",
+          "type": "temporal"},
+
+         
+      "y": {
+        "field": "Industrial_Production",
+          "axis": {"grid": false},
+          "title":"",
+          "type": "quantitative"},
+    }
+}
+
