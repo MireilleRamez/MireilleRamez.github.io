@@ -48,11 +48,11 @@
     </h1>
     <p style="margin-top: 0px; color: darkblue">
         <!-- we're setting the margin to 0px so the header and authour name are close together -->
-        Your Name | <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/">LinkedIn</a> | <a
-            href="https://www.github.com/YOUR_GITHUB">GitHub</a>
+       Mireille Ramez Refaat Kamal Messih | <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/">LinkedIn</a> | <a
+            href="https://github.com/MireilleRamez">GitHub</a>
     </p>
     <h3 class="small"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
-        This page acts as your portfolio of charts. You can use it as a good starting point to display your work but make sure to customise it to make it your own, or even start from scratch.  
+        This page acts as my portfolio of charts.
     </h3>
 
     <!-- We're organising the page into sections, with each section containing a chart, title and a description -->
@@ -65,16 +65,36 @@
             </p>
         </div>
         <figure id="Location1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <figure id="RD1"></figure>
+        <figure id="RD2"></figure>
     </section>
 
     <section>
         <div class="chart-description">
-            <h2>Section 2: Egypt's Employment Chart</h2>
+            <h2>Section 2: Portfolio Task 2: Egypt's Employment Chart</h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-               Description
+                Egypt's Employment Chart
             </p>
         </div>
         <figure id="Location2"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+    </section>
+
+    <section>
+        <div class="chart-description">
+            <h2>Section 3: Week 3 Portfolio Task: Economics Festival Topic Discussion </h2>
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                At the economics festival, a key discussion addressed whether GDP growth correlates with decreased sustainability due to increased production. 
+                To investigate this, I analyzed U.S. data on industrial production and CO2 emissions from 1973 to 2022.
+                The data shows that while industrial production significantly increased during this period, CO2 emissions actually decreased. 
+                This suggests that GDP growth does not inherently lead to lower sustainability.
+                A possible explanation is the advancement of technology in industrial processes, allowing for greater output with reduced environmental impact. 
+                This challenges the assumption that economic growth must compromise sustainability. 
+            </p>
+        </div>
+        <figure id="Location3_1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <figure id="Location3_2"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+
+
     </section>
 
     <!-- Do you want to add more sections? -->
@@ -96,6 +116,18 @@
                                                                                                                     // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
 
         vegaEmbed('#Location2', figure_2_spec)
+
+        let figure_3_spec = "RD1.json"; 
+        vegaEmbed('#RD1', figure_3_spec)
+
+        let figure_4_spec = "RD2.json"; 
+        vegaEmbed('#RD2', figure_4_spec)
+
+        vegaEmbed('#Location3_1', "wk3_chart1.json")
+        vegaEmbed('#Location3_2', "wk3_chart2.json")
+
+
+        
         // Do you want to add more graphs?
         // try defining a new variable for figure_3_spec, adding VegaEmbed for Location3, and adding a new section in the HTML
         // e.g. 
