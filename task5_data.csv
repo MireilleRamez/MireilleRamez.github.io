@@ -1,0 +1,305 @@
+,Location,Date,Value
+0,Australia,1970,
+1,Austria,1970,4.8
+2,Belgium,1970,3.9
+3,Canada,1970,6.3
+4,Chile,1970,
+5,Colombia,1970,
+6,Costa Rica,1970,
+7,Czech Republic,1970,
+8,Denmark,1970,
+9,Estonia,1970,
+10,Finland,1970,5.0
+11,France,1970,5.2
+12,Germany,1970,5.7
+13,Greece,1970,
+14,Hungary,1970,
+15,Iceland,1970,4.7
+16,Ireland,1970,4.9
+17,Israel,1970,
+18,Italy,1970,
+19,Japan,1970,4.3
+20,Latvia,1970,
+21,Lithuania,1970,
+22,Luxembourg,1970,
+23,Mexico,1970,
+24,Netherlands,1970,
+25,New Zealand,1970,5.1
+26,Norway,1970,4.0
+27,Poland,1970,
+28,Portugal,1970,2.3
+29,Slovakia,1970,
+30,Slovenia,1970,
+31,South Korea,1970,2.6
+32,Spain,1970,3.1
+33,Sweden,1970,5.4
+34,Switzerland,1970,4.8
+35,Turkey,1970,
+36,United Kingdom,1970,4.0
+37,United States,1970,6.2
+38,Australia,1980,5.8
+39,Austria,1980,7.0
+40,Belgium,1980,6.2
+41,Canada,1980,6.5
+42,Chile,1980,
+43,Colombia,1980,
+44,Costa Rica,1980,
+45,Czech Republic,1980,
+46,Denmark,1980,8.4
+47,Estonia,1980,
+48,Finland,1980,5.9
+49,France,1980,6.8
+50,Germany,1980,8.1
+51,Greece,1980,
+52,Hungary,1980,
+53,Iceland,1980,5.9
+54,Ireland,1980,7.5
+55,Israel,1980,6.7
+56,Italy,1980,
+57,Japan,1980,6.1
+58,Latvia,1980,
+59,Lithuania,1980,
+60,Luxembourg,1980,4.8
+61,Mexico,1980,
+62,Netherlands,1980,6.5
+63,New Zealand,1980,5.8
+64,Norway,1980,5.4
+65,Poland,1980,
+66,Portugal,1980,4.8
+67,Slovakia,1980,
+68,Slovenia,1980,
+69,South Korea,1980,3.4
+70,Spain,1980,5.0
+71,Sweden,1980,7.7
+72,Switzerland,1980,6.4
+73,Turkey,1980,2.4
+74,United Kingdom,1980,5.1
+75,United States,1980,8.2
+76,Australia,1990,6.5
+77,Austria,1990,7.7
+78,Belgium,1990,7.1
+79,Canada,1990,8.4
+80,Chile,1990,
+81,Colombia,1990,
+82,Costa Rica,1990,
+83,Czech Republic,1990,3.7
+84,Denmark,1990,8.0
+85,Estonia,1990,
+86,Finland,1990,7.3
+87,France,1990,8.0
+88,Germany,1990,8.0
+89,Greece,1990,6.1
+90,Hungary,1990,
+91,Iceland,1990,7.4
+92,Ireland,1990,5.6
+93,Israel,1990,6.2
+94,Italy,1990,7.0
+95,Japan,1990,5.7
+96,Latvia,1990,
+97,Lithuania,1990,
+98,Luxembourg,1990,5.3
+99,Mexico,1990,
+100,Netherlands,1990,7.0
+101,New Zealand,1990,6.7
+102,Norway,1990,7.1
+103,Poland,1990,4.3
+104,Portugal,1990,5.5
+105,Slovakia,1990,
+106,Slovenia,1990,
+107,South Korea,1990,3.6
+108,Spain,1990,6.1
+109,Sweden,1990,7.2
+110,Switzerland,1990,7.6
+111,Turkey,1990,2.4
+112,United Kingdom,1990,5.1
+113,United States,1990,11.2
+114,Australia,2000,7.6
+115,Austria,2000,9.2
+116,Belgium,2000,8.0
+117,Canada,2000,8.2
+118,Chile,2000,7.0
+119,Colombia,2000,5.6
+120,Costa Rica,2000,6.6
+121,Czech Republic,2000,5.7
+122,Denmark,2000,8.1
+123,Estonia,2000,5.2
+124,Finland,2000,7.1
+125,France,2000,9.6
+126,Germany,2000,9.9
+127,Greece,2000,7.2
+128,Hungary,2000,6.8
+129,Iceland,2000,8.9
+130,Ireland,2000,5.9
+131,Israel,2000,6.6
+132,Italy,2000,7.6
+133,Japan,2000,7.0
+134,Latvia,2000,5.4
+135,Lithuania,2000,6.2
+136,Luxembourg,2000,5.9
+137,Mexico,2000,4.4
+138,Netherlands,2000,7.7
+139,New Zealand,2000,7.5
+140,Norway,2000,7.7
+141,Poland,2000,5.3
+142,Portugal,2000,8.6
+143,Slovakia,2000,5.3
+144,Slovenia,2000,7.8
+145,South Korea,2000,3.9
+146,Spain,2000,6.8
+147,Sweden,2000,7.3
+148,Switzerland,2000,9.1
+149,Turkey,2000,4.6
+150,United Kingdom,2000,7.1
+151,United States,2000,12.5
+152,Australia,2010,8.4
+153,Austria,2010,10.2
+154,Belgium,2010,10.2
+155,Canada,2010,10.7
+156,Chile,2010,6.8
+157,Colombia,2010,7.1
+158,Costa Rica,2010,8.0
+159,Czech Republic,2010,7.6
+160,Denmark,2010,10.6
+161,Estonia,2010,6.6
+162,Finland,2010,9.1
+163,France,2010,11.2
+164,Germany,2010,11.1
+165,Greece,2010,9.6
+166,Hungary,2010,7.4
+167,Iceland,2010,8.4
+168,Ireland,2010,10.5
+169,Israel,2010,6.9
+170,Italy,2010,8.9
+171,Japan,2010,9.1
+172,Latvia,2010,6.1
+173,Lithuania,2010,6.8
+174,Luxembourg,2010,6.7
+175,Mexico,2010,5.7
+176,Netherlands,2010,10.2
+177,New Zealand,2010,9.6
+178,Norway,2010,8.9
+179,Poland,2010,6.5
+180,Portugal,2010,10.0
+181,Slovakia,2010,7.7
+182,Slovenia,2010,8.6
+183,South Korea,2010,5.8
+184,Spain,2010,9.1
+185,Sweden,2010,8.3
+186,Switzerland,2010,9.9
+187,Turkey,2010,5.0
+188,United Kingdom,2010,9.9
+189,United States,2010,16.2
+190,Australia,2020,10.7
+191,Austria,2020,11.4
+192,Belgium,2020,11.2
+193,Canada,2020,13.0
+194,Chile,2020,9.7
+195,Colombia,2020,8.7
+196,Costa Rica,2020,7.8
+197,Czech Republic,2020,9.2
+198,Denmark,2020,10.6
+199,Estonia,2020,7.6
+200,Finland,2020,9.6
+201,France,2020,12.1
+202,Germany,2020,12.7
+203,Greece,2020,9.5
+204,Hungary,2020,7.3
+205,Iceland,2020,9.6
+206,Ireland,2020,7.1
+207,Israel,2020,7.7
+208,Italy,2020,9.6
+209,Japan,2020,11.0
+210,Latvia,2020,7.2
+211,Lithuania,2020,7.5
+212,Luxembourg,2020,5.7
+213,Mexico,2020,6.2
+214,Netherlands,2020,11.2
+215,New Zealand,2020,9.7
+216,Norway,2020,11.2
+217,Poland,2020,6.5
+218,Portugal,2020,10.5
+219,Slovakia,2020,7.1
+220,Slovenia,2020,9.4
+221,South Korea,2020,8.4
+222,Spain,2020,10.7
+223,Sweden,2020,11.3
+224,Switzerland,2020,11.7
+225,Turkey,2020,4.6
+226,United Kingdom,2020,12.2
+227,United States,2020,18.8
+228,Australia,2021,10.6
+229,Austria,2021,12.1
+230,Belgium,2021,11.0
+231,Canada,2021,12.3
+232,Chile,2021,9.3
+233,Colombia,2021,9.0
+234,Costa Rica,2021,7.6
+235,Czech Republic,2021,9.5
+236,Denmark,2021,10.8
+237,Estonia,2021,7.5
+238,Finland,2021,10.3
+239,France,2021,12.3
+240,Germany,2021,12.9
+241,Greece,2021,9.2
+242,Hungary,2021,7.4
+243,Iceland,2021,9.7
+244,Ireland,2021,6.7
+245,Israel,2021,7.9
+246,Italy,2021,9.4
+247,Japan,2021,11.3
+248,Latvia,2021,9.0
+249,Lithuania,2021,7.8
+250,Luxembourg,2021,5.7
+251,Mexico,2021,6.1
+252,Netherlands,2021,11.4
+253,New Zealand,2021,10.1
+254,Norway,2021,9.9
+255,Poland,2021,6.4
+256,Portugal,2021,11.1
+257,Slovakia,2021,7.8
+258,Slovenia,2021,9.5
+259,South Korea,2021,9.3
+260,Spain,2021,10.7
+261,Sweden,2021,11.2
+262,Switzerland,2021,11.8
+263,Turkey,2021,4.6
+264,United Kingdom,2021,12.4
+265,United States,2021,17.4
+266,Australia,2022,10.0
+267,Austria,2022,11.4
+268,Belgium,2022,10.9
+269,Canada,2022,11.2
+270,Chile,2022,9.0
+271,Colombia,2022,8.1
+272,Costa Rica,2022,7.2
+273,Czech Republic,2022,9.1
+274,Denmark,2022,9.5
+275,Estonia,2022,6.9
+276,Finland,2022,10.2
+277,France,2022,11.9
+278,Germany,2022,12.7
+279,Greece,2022,8.6
+280,Hungary,2022,6.7
+281,Iceland,2022,8.6
+282,Ireland,2022,6.1
+283,Israel,2022,7.4
+284,Italy,2022,9.0
+285,Japan,2022,11.5
+286,Latvia,2022,8.8
+287,Lithuania,2022,7.5
+288,Luxembourg,2022,5.5
+289,Mexico,2022,5.5
+290,Netherlands,2022,11.2
+291,New Zealand,2022,11.2
+292,Norway,2022,8.0
+293,Poland,2022,6.7
+294,Portugal,2022,10.6
+295,Slovakia,2022,7.6
+296,Slovenia,2022,8.8
+297,South Korea,2022,9.7
+298,Spain,2022,10.5
+299,Sweden,2022,10.7
+300,Switzerland,2022,11.3
+301,Turkey,2022,4.3
+302,United Kingdom,2022,11.3
+303,United States,2022,16.6
