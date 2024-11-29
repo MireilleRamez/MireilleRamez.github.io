@@ -1,0 +1,62 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Line chart for Value over time for different Locations with a label for the United States.",
+  "width": 800,
+  "height": 500,
+  "data": {
+    "url": "https://raw.githubusercontent.com/MireilleRamez/MireilleRamez.github.io/refs/heads/main/task5_data.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {"filter": "datum.Value !== ''"},
+    {"calculate": "parseFloat(datum.Value)", "as": "Value"}
+  ],
+  "layer": [
+    {
+      "mark": "line",
+      "encoding": {
+        "x": {"field": "Date", "type": "temporal", "axis": {"title": "Year"}},
+        "y": {
+          "field": "Value",
+          "type": "quantitative",
+          "axis": {"title": "Value"}
+        },
+        "color": {
+          "field": "Location",
+          "type": "nominal",
+          "legend": {"title": "Location"},
+          "scale": {"scheme": "category10"}
+        },
+        "tooltip": [
+          {"field": "Location", "type": "nominal"},
+          {"field": "Date", "type": "temporal"},
+          {"field": "Value", "type": "quantitative"}
+        ]
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.Location === 'United States'"},
+        {
+          "aggregate": [{"op": "argmax", "field": "Date", "as": "latestDate"}],
+          "groupby": ["Location"]
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 5,
+        "dy": -5,
+        "fontSize": 12
+      },
+      "encoding": {
+        "x": {"field": "latestDate.Date", "type": "temporal"},
+        "y": {"field": "Value", "type": "quantitative"},
+        "text": {"value": "United States"},
+        "color": {"value": "black"}
+      }
+    }
+  ],
+  "config": {}
+}

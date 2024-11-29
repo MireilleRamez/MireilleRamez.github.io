@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html> 
+<head>    
+
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Data Science Final Project</title> 
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <style>
+        #chartGrid {
+            display: flex;
+        }
+        
+    </style>
+</head>
+
+<body> 
+
+    <h1 class="big" style="margin-bottom: 0px;">
+        Mireille Ramez
+    </h1>
+    <p style="margin-top: 0px; color: darkblue">
+       Mireille Ramez Refaat Kamal Messih | <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/">LinkedIn</a> | <a
+            href="https://github.com/MireilleRamez">GitHub</a>
+    </p>
+    <h3 class="small">
+        This page acts as my final project of exploring the relationship between healthcare spending 
+        and the mortality rate of liver cancer patients in the UK vs Germany.
+    </h3>
+
+    <section>
+        <div class="chart-description">
+            <h2>Section 1: Liver cancer Mortality Rates by Country </h2>
+            <p> 
+                Source of Data: https://gco.iarc.fr/today/en/dataviz/bars-compare-populations?mode=cancer&group_populations=1&multiple_populations=1&types=1&populations=250_826&group_crc=0&key=asr&sort_by=value1 
+            </p>
+        </div>
+        <figure id="Location1"></figure> 
+    
+    </section>
+
+    <section>
+        <div class="chart-description">
+            <h2>Section 2: Liver Cancer Mortality Rates</h2>
+            <p> 
+              UK data gathered from: https://www.cancerresearchuk.org/health-professional/cancer-statistics/statistics-by-cancer-type/liver-cancer/mortality#heading-Two
+              Germany data gathered from: https://www.krebsdaten.de/Krebs/EN/Database/databasequery_step1_node.html
+              Cleaning and merging the UK and Germany timeseries collected data was done through this google colab notebook:
+              https://colab.research.google.com/drive/1y2FWTc2BS0IVEinPTyZEAucJ9hU0El00?usp=sharing
+            </p>
+        </div>
+        <figure id="Location2"></figure> 
+    </section>
+
+    
+
+   <script>
+      
+        let figure_1_spec = "Chart1.json"; 
+        vegaEmbed('#Location1', figure_1_spec) 
+
+        let figure_2_spec = "Chart2.json"; 
+        vegaEmbed('#Location2', figure_2_spec)
+
+
+    </script>
+
+</body>
+    
+</html>

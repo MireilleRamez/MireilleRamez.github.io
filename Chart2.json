@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "UK vs Germany Age Standardized Mortality Rates",
+  "data": {
+    "url": "https://raw.githubusercontent.com/MireilleRamez/MireilleRamez.github.io/refs/heads/main/Merged_Mortality_Data.csv"
+  },
+  "width": 800,
+  "height": 400,
+  "mark": {"type": "line", "interpolate": "monotone"},
+  "title": "UK vs Germany Age Standardized Mortality Rates",
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "temporal",
+      "title": "Year",
+      "axis": {"labelAngle": -45}
+    },
+    "y": {
+      "field": "Mortality Rate",
+      "type": "quantitative",
+      "title": "Mortality Rate (per 100,000)"
+    },
+    "color": {
+      "field": "Country",
+      "type": "nominal",
+      "scale": {"domain": ["UK", "Germany"], "range": ["#1f77b4", "#ff7f0e"]},
+      "legend": {"orient": "top-left"}
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal"},
+      {"field": "Year", "type": "temporal", "title": "Year"},
+      {
+        "field": "Mortality Rate",
+        "type": "quantitative",
+        "title": "Mortality Rate"
+      }
+    ]
+  },
+  "config": {}
+}

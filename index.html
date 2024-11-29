@@ -93,10 +93,60 @@
         </div>
         <figure id="Location3_1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
         <figure id="Location3_2"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-
-
     </section>
 
+    <section>
+        <div class="chart-description">
+            <h2>Section 4: Week 4 Portfolio Task</h2>
+            <p> 
+                The tast is to replicate a misguiding published chart, and then improve it. 
+                A photo of the Original Chart is displayed along with the one I replicated, followed by the mofidifed chart I did
+                Modifications basically included changing the scale of the bar chart in order to have a well visualized bar, having the bar length reflecting the numebr of likes. 
+                It also highlighted the top bar alond with its axis label to point out to the largest number of likes. 
+                Additionally, I changed the color of the bars from orange to blue.
+            </p>
+        </div>
+        <p> 
+            Original Photo of chart to be replicated
+         </p>
+        <img src="Original_photo.png"> </img>
+
+        <p> 
+            Replicated Chart
+         </p>
+        <figure id="Original"></figure> 
+
+        <p> 
+           Modified Chart
+         </p>
+        <figure id="Modified"></figure> 
+    </section>
+
+    <section>
+        <div class="chart-description">
+            <h2>Section 5: Week 5 Portfolio Task: Scraping Data from a website</h2>
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                I chose to scrape data about the healthcare spending as a percentage of GDP per country.
+                Here's the wikipedia link from which I got the data:
+                "https://en.wikipedia.org/wiki/Health_spending_as_percent_of_gross_domestic_product_(GDP)_by_country"
+                Then I normalised the data into a long format using google colab: 
+                "https://colab.research.google.com/drive/1YB_3v3Wyc9ai-DkVp6HV0imjL2uZuH09?usp=sharing", then I exported it into csv file.
+                Afterwards I created a chart on Vega-Light using the scraped data, which is displayed below
+            </p>
+        </div>
+        <figure id="Scraped"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+    </section>
+
+    <section>
+        <div class="chart-description">
+            <h2>Section 6: Week 6 Portfolio Task: API</h2>
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+            https://colab.research.google.com/drive/1Lp4NVGgdw-6jipCHM4v6qIQrl7QplAJ6?usp=sharing
+            </p>
+        </div>
+        <figure id="Scraped"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+    </section>
+     
     <!-- Do you want to add more sections? -->
         <!-- Try copying pasting the section above -->
         <!-- You'll need to change the id of the figure "<figure id="Location3"... -->
@@ -126,8 +176,14 @@
         vegaEmbed('#Location3_1', "wk3_chart1.json")
         vegaEmbed('#Location3_2', "wk3_chart2.json")
 
+        let figure_5_spec = "Original.json"; 
+        vegaEmbed('#Original', figure_5_spec)
 
-        
+        let figure_6_spec = "Modified.json"; 
+        vegaEmbed('#Modified', figure_6_spec)
+
+        let figure_7_spec = "Task5_chart.json"; 
+        vegaEmbed('#Scraped', figure_7_spec)
         // Do you want to add more graphs?
         // try defining a new variable for figure_3_spec, adding VegaEmbed for Location3, and adding a new section in the HTML
         // e.g. 

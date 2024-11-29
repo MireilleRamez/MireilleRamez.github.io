@@ -1,0 +1,116 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A bar chart displaying the average number of likes per Facebook post in thousands.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/MireilleRamez/MireilleRamez.github.io/refs/heads/main/Task4.csv"
+  },
+  "title": {
+    "text": ["Left-click"],
+    "subtitle": ["Average number of likes per Facebook post", "2016, '000"],
+    "anchor": "start",
+    "fontSize": 18,
+    "color": "black",
+    "align": "left",
+    "subtitleFontSize": 16,
+    "subtitleColor": "black",
+    "dy": 80,
+    "dx": -100,
+    "frame": "group",
+    "font": "Arial"
+  },
+  "width": 400,
+  "height": 300,
+  "background": "#e6f7ff",
+  "layer": [
+    {
+      "transform": [
+        {"calculate": "datum.Likes / 1000", "as": "LikesInThousands"}
+      ],
+      "encoding": {
+        "y": {
+          "field": "Name",
+          "type": "nominal",
+          "sort": "-x",
+          "axis": {
+            "labelAngle": 0,
+            "title": null,
+            "labelFont": "Arial",
+            "labelFontSize": 12,
+            "labelFontWeight": "bold"
+          }
+        },
+        "x": {
+          "field": "LikesInThousands",
+          "type": "quantitative",
+          "scale": {"domain": [0, 6], "nice": true},
+          "axis": {
+            "orient": "top",
+            "tickCount": 7,
+            "values": [0, 1, 2, 3, 4, 5, 6],
+            "grid": true,
+            "gridColor": "white",
+            "gridOpacity": 1,
+            "labelFont": "Arial",
+            "labelFontSize": 12,
+            "title": null
+          }
+        }
+      },
+      "layer": [
+        {"mark": {"type": "bar", "color": "#2f68b2"}},
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "bottom",
+            "dx": -10,
+            "dy": 30,
+            "fontSize": 10,
+            "color": "gray",
+            "font": "Arial"
+          },
+          "encoding": {
+            "text": {"value": "Source: Facebook"},
+            "x": {"value": 0},
+            "y": {"value": 290}
+          }
+        }
+      ]
+    },
+    {
+      "data": {"values": [{}]},
+      "mark": {
+        "type": "rect",
+        "color": "blue",
+        "opacity": 0.1,
+        "width": 500,
+        "height": 50,
+        "x": 130,
+        "y": 25
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "color": "transparent",
+        "size": 1,
+        "align": "left",
+        "baseline": "top",
+        "dx": -100,
+        "dy": -15
+      },
+      "encoding": {"text": {"value": " "}}
+    },
+    {
+      "mark": {
+        "type": "rect",
+        "color": "firebrick",
+        "width": 40,
+        "height": 10,
+        "x": -80,
+        "y": -80
+      }
+    }
+  ],
+  "config": {}
+}

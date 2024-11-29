@@ -1,0 +1,29 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A bar chart with data, grouped by region and shaded in blue.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/MireilleRamez/MireilleRamez.github.io/refs/heads/main/Age-Standardized%20Rate%20(World)%20per%20100%20000%2C%20Mortality%2C%20Both%20sexes%2C%20in%202022.csv"
+  },
+  "width": 600,
+  "mark": "bar",
+  "encoding": {
+    "y": {
+      "field": "Country",
+      "sort": "-x",
+      "type": "nominal",
+      "axis": {"labelAngle": 0, "title": null}
+    },
+    "x": {"field": "Mortality", "type": "quantitative"},
+    "color": {
+      "field": "Region",
+      "type": "nominal",
+      "scale": {"scheme": "blues"}
+    },
+    "tooltip": [
+      {"field": "Country"},
+      {"field": "Mortality"},
+      {"field": "Region"}
+    ]
+  },
+  "config": {}
+}
