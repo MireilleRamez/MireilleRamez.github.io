@@ -1,0 +1,121 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 600,
+  "projection": {"type": "identity", "reflectY": true},
+  "title": {
+    "text": "5-Year Cancer Survival Rates by Region in the UK",
+    "subtitle": "Age-standardised and Non-standardised Survival Rates for Selected Cancer Types",
+    "fontSize": 20,
+    "subtitleFontSize": 14,
+    "anchor": "start",
+    "align": "center"
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/MireilleRamez/MireilleRamez.github.io/refs/heads/main/Cancer_Alliances_July_2023_Boundaries_EN_BUC_-8113992691418614215.geojson",
+        "format": {"type": "json", "property": "features"}
+      },
+      "mark": {"type": "geoshape", "stroke": "white"},
+      "encoding": {
+        "color": {"value": "#d9d9d9"},
+        "tooltip": [
+          {
+            "field": "properties.CAL23NM",
+            "type": "nominal",
+            "title": "Cancer Alliance"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/MireilleRamez/MireilleRamez.github.io/refs/heads/main/UK%20survival%20by%20type%20and%20region.csv"
+      },
+      "transform": [
+        {
+          "lookup": "Geography Name",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/MireilleRamez/MireilleRamez.github.io/refs/heads/main/Cancer_Alliances_July_2023_Boundaries_EN_BUC_-8113992691418614215.geojson",
+              "format": {"type": "json", "property": "features"}
+            },
+            "key": "properties.CAL23NM",
+            "fields": ["geometry", "type", "properties"]
+          }
+        },
+        {
+          "filter": {
+            "field": "Standardisation Type",
+            "equal": {"expr": "ageStd"}
+          }
+        },
+        {
+          "filter": {
+            "field": "Cancer Site",
+            "equal": {"expr": "CancerSiteFilter"}
+          }
+        }
+      ],
+      "mark": {"type": "geoshape", "stroke": "white"},
+      "encoding": {
+        "color": {
+          "field": "Survival (%)",
+          "type": "quantitative",
+          "scale": {"scheme": "blues"},
+          "title": "5-Year Cancer Survival Rate (%)"
+        },
+        "tooltip": [
+          {
+            "field": "properties.CAL23NM",
+            "type": "nominal",
+            "title": "Region of the UK"
+          },
+          {
+            "field": "Survival (%)",
+            "type": "quantitative",
+            "title": "Survival Rate (%)"
+          },
+          {"field": "Cancer Site", "type": "nominal", "title": "Cancer Site"}
+        ]
+      }
+    }
+  ],
+  "params": [
+    {
+      "name": "CancerSiteFilter",
+      "value": "Liver",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Colon",
+          "Kidney",
+          "Lung",
+          "Oesophagus",
+          "Liver",
+          "Rectal",
+          "Bladder",
+          "Follicular (nodular) NHL",
+          "Melanoma",
+          "Myeloma",
+          "Non-Hodgkin lymphoma",
+          "Pancreas",
+          "Colorectal",
+          "Leukaemia"
+        ],
+        "name": "Select Cancer Site: "
+      }
+    },
+    {
+      "name": "ageStd",
+      "value": "Non-standardised",
+      "bind": {
+        "input": "select",
+        "options": ["Non-standardised", "Age-standardised (4 gps)"],
+        "name": "Age Standardisation:"
+      }
+    }
+  ],
+  "config": {}
+}

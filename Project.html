@@ -56,15 +56,66 @@
         <figure id="Location2"></figure> 
     </section>
 
-    
+    <section>
+        <div class="chart-description">
+            <h2>Section 3: Health Expenditure VS Liver Cancer Mortality Rate</h2>
+            <p> 
+            Health Expenditure as a % of GDP data exported from:
+            https://data-explorer.oecd.org/vis?lc=en&df[ds]=DisseminateArchiveDMZ&df[id]=DF_DP_LIVE&df[ag]=OECD&av=true&pd=1972%2C2024&dq=DEU%2BGBR%2BOECD.HEALTHEXP...A&to[TIME_PERIOD]=false&vw=tb&lb=bt
+            Cleaning Health Expenditure Data:
+            https://colab.research.google.com/drive/1t0RFrH2WqpyHRr5sUiPmfo3X2WIgv-qC?usp=sharing
+            Merging Health Expenditure and MOrtality Rates:
+            https://colab.research.google.com/drive/1cEs693Sc0FBqyTNZ-lW-D4xcHymWXa9P?usp=sharing
+
+            </p>
+        </div>
+        <figure id="Location3"></figure> 
+    </section>
+
+    <section>
+        <div class="chart-description">
+            <h2>Section 4: Alcohol Consumption VS Liver Cancer Mortality Rate</h2>
+            <p> 
+            Alcohol Consumption data are exported form : https://ourworldindata.org/alcohol-consumption
+            Meerging Alcohol and mortality data:
+            https://colab.research.google.com/drive/1KwPhpMM_6uPV_vwA8DjmdS5hzUdpiMUC?usp=sharing
+            </p>
+        </div>
+        <figure id="Location4"></figure> 
+    </section>
+
+    <section>
+        <div class="chart-description">
+            <h2>Section 5: Subregional variation in UK for 5-year Cancer Survival Rates</h2>
+            <p> 
+            UK Cancer Alliances (July 2023) Boundaries EN BUC:
+            https://www.data.gov.uk/dataset/550aa7e3-ac64-41b1-b91f-299ccaf0a2d4/cancer-alliances-july-2023-boundaries-en-buc
+            Uk subrigional cancer survival rates: 
+            https://digital.nhs.uk/data-and-information/publications/statistical/cancer-survival-in-england/cancers-diagnosed-2015-to-2019-followed-up-to-2020
+
+          Cleaning UK subregional survival rates by region:
+          https://colab.research.google.com/drive/1uJiVCVJXp2mLYvvYt_Sdjgyj0mQ9e_zr?usp=sharing
+
+          Throughout the project, I've been looking into Age standardized mortality rates as it exploits
+          But due to data limitations, more data were provided as a non standardised survival rates 
+          so I included a drop down tool where user can choose which
+          measure they want to display
+            </p>
+        </div>
+        <figure id="Location5"></figure> 
+    </section>
 
    <script>
       
-        let figure_1_spec = "Chart1.json"; 
-        vegaEmbed('#Location1', figure_1_spec) 
+        let figure_1_spec = "Chart1.json"; vegaEmbed('#Location1', figure_1_spec) 
 
-        let figure_2_spec = "Chart2.json"; 
-        vegaEmbed('#Location2', figure_2_spec)
+        let figure_2_spec = "Chart2.json"; vegaEmbed('#Location2', figure_2_spec)
+
+        let figure_3_spec = "health_exp vs mortality + reg.json"; vegaEmbed('#Location3', figure_3_spec)
+
+        let figure_4_spec = "alc-mortality interactive scatetr plot.json"; vegaEmbed('#Location4', figure_4_spec)
+
+        let figure_5_spec = "Task7_Interactive Map.json"; vegaEmbed('#Location5', figure_5_spec)
 
 
     </script>

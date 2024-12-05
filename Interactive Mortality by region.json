@@ -17,7 +17,7 @@
     "color": {
       "field": "Region",
       "type": "nominal",
-      "scale": {"scheme": "purples"}
+      "scale": {"scheme": "pastel1"}
     },
     "tooltip": [
       {"field": "Country"},
@@ -25,5 +25,25 @@
       {"field": "Region"}
     ]
   },
+  "params": [
+    {
+      "name": "Region",
+      "value": "All options",
+      "bind": {
+        "input": "select",
+        "options": [
+          "All options",
+          "EUR",
+          "Africa",
+          "Asia",
+          "Eurasia",
+          "North America",
+          "Oceania"
+        ],
+        "name": "Select Region: "
+      }
+    }
+  ],
+  "transform": [{"filter": "Region=='All options' | datum.Region == Region"}],
   "config": {}
 }

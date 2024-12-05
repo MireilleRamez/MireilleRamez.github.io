@@ -134,62 +134,124 @@
                 Afterwards I created a chart on Vega-Light using the scraped data, which is displayed below
             </p>
         </div>
-        <figure id="Scraped"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <figure id="Scraped"></figure> 
     </section>
 
     <section>
         <div class="chart-description">
             <h2>Section 6: Week 6 Portfolio Task: API</h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                I chose to create an API loop for constant GDP of 9 countries. I used FRED API to extract the data
+                Here's the google colab notebook link used to generate the 9 charts
             https://colab.research.google.com/drive/1Lp4NVGgdw-6jipCHM4v6qIQrl7QplAJ6?usp=sharing
             </p>
         </div>
-        <figure id="Scraped"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <figure id="GBR_API"></figure> 
+        <figure id="FRA_API"></figure> 
+        <figure id="EGY_API"></figure> 
+        <figure id="DEU_API"></figure> 
+        <figure id="CAN_API"></figure> 
+        <figure id="AUS_API"></figure> 
+        <figure id="JPN_API"></figure> 
+        <figure id="RUS_API"></figure> 
+        <figure id="USA_API"></figure> 
     </section>
      
-    <!-- Do you want to add more sections? -->
-        <!-- Try copying pasting the section above -->
-        <!-- You'll need to change the id of the figure "<figure id="Location3"... -->
-        <!-- ... and add a new variable for the graph spec in the script at the bottom of the page -->
+    <section>
+        <div class="chart-description">
+            <h2>Section 7: Week 7 Portfolio Task: Map</h2>
+            <p> 
+               I created a Map for the percentage of survival of different cancer types in the UK regions
+               Data extracted from:
+               https://digital.nhs.uk/data-and-information/publications/statistical/cancer-survival-in-england/cancers-diagnosed-2015-to-2019-followed-up-to-2020
+               Data cleaned through this google colab notebook:
+               https://colab.research.google.com/drive/1uJiVCVJXp2mLYvvYt_Sdjgyj0mQ9e_zr?usp=sharing
+               Boundaries data are extracted from :
+               https://www.data.gov.uk/dataset/550aa7e3-ac64-41b1-b91f-299ccaf0a2d4/cancer-alliances-july-2023-boundaries-en-buc
+            </p>
+        </div>
+        <figure id="Base_Map"></figure> 
+        <figure id="Interactive_Map"></figure> 
+    </section>
 
+    <section>
+        <div class="chart-description">
+            <h2>Section 8: Week 8 Portfolio Task: Advanced Charts</h2>
+            <p> 
+             For this task, I used the chart I created for the project visualizong the Healthcare Expenditure VS Cancer Mortality Rate in a scatter plot, 
+             and added a regression line for better analysis and discussion
+            </p>
+        </div>
+        <figure id="Task8_Chart1"></figure> 
+        <figure id="Task8_Chart2"></figure> 
+    </section>
 
-    <!-- This is a script, it's a way to run JavaScript code on the page -->
+    <section>
+        <div class="chart-description">
+            <h2>Section 9: Week 9 Portfolio Task: Big Data</h2>
+            <p> 
+                https://drive.google.com/file/d/1YdCL9HBEFuvHd3GFGpKIS-_LpAT-e1n7/view?usp=sharing
+
+            </p>
+        </div>
+        <figure id="Task9_Chart1"></figure> 
+        <figure id="Task9_Chart2"></figure> 
+    </section>
+
+    <section>
+        <div class="chart-description">
+            <h2>Section 10: Week 10 Portfolio Task: Interactive Chart</h2>
+            <p> 
+             For this portfolio task, I added interactivity to one of the charts used in my project where it displayed the relationship between
+             alcohol consumption and liver cancer moriality rates in a scatter plot and the interactivity elements connects points together 
+             as the mouse hang over the points
+            </p>
+        </div>
+        <figure id="Task10_Chart1"></figure> 
+        <figure id="Task10_Chart2"></figure> 
+    </section>
+
     <script>
-        // This is a comment in JavaScript - it's a different language to HTML and CSS
 
-        let figure_1_spec = "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json"; // We're storing the URL of the graph we want to display in a variable
-                                                                                                                    // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
+        let figure_1_spec = "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/2/s2_chart2.json";  vegaEmbed('#Location1', figure_1_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
 
-        vegaEmbed('#Location1', figure_1_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
+        let figure_2_spec = "Egypt_Employment.json"; vegaEmbed('#Location2', figure_2_spec)
 
-        let figure_2_spec = "Egypt_Employment.json"; // We're storing the URL of the graph we want to display in a variable
-                                                                                                                    // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
+        let figure_3_spec = "RD1.json";  vegaEmbed('#RD1', figure_3_spec)
 
-        vegaEmbed('#Location2', figure_2_spec)
-
-        let figure_3_spec = "RD1.json"; 
-        vegaEmbed('#RD1', figure_3_spec)
-
-        let figure_4_spec = "RD2.json"; 
-        vegaEmbed('#RD2', figure_4_spec)
+        let figure_4_spec = "RD2.json"; vegaEmbed('#RD2', figure_4_spec)
 
         vegaEmbed('#Location3_1', "wk3_chart1.json")
+        
         vegaEmbed('#Location3_2', "wk3_chart2.json")
 
-        let figure_5_spec = "Original.json"; 
-        vegaEmbed('#Original', figure_5_spec)
+        let figure_5_spec = "Original.json";  vegaEmbed('#Original', figure_5_spec)
 
-        let figure_6_spec = "Modified.json"; 
-        vegaEmbed('#Modified', figure_6_spec)
+        let figure_6_spec = "Modified.json"; vegaEmbed('#Modified', figure_6_spec)
 
-        let figure_7_spec = "Task5_chart.json"; 
-        vegaEmbed('#Scraped', figure_7_spec)
-        // Do you want to add more graphs?
-        // try defining a new variable for figure_3_spec, adding VegaEmbed for Location3, and adding a new section in the HTML
-        // e.g. 
-        // let figure_3_spec = ...
-        // vegaEmbed('#Location3', figure_3_spec)
+        let figure_7_spec = "Task5_chart.json"; vegaEmbed('#Scraped', figure_7_spec)
+       
+        let figure_8_spec = "GBR_API.json";  vegaEmbed('#GBR_API', figure_8_spec)
+        let figure_9_spec = "FRA_API.json";  vegaEmbed('#FRA_API', figure_9_spec)
+        let figure_10_spec = "EGY_API.json";  vegaEmbed('#EGY_API', figure_10_spec)
+        let figure_11_spec = "DEU_API.json";  vegaEmbed('#DEU_API', figure_11_spec)
+        let figure_12_spec = "CAN_API.json";  vegaEmbed('#CAN_API', figure_12_spec)
+        let figure_13_spec = "AUS_API.json";  vegaEmbed('#AUS_API', figure_13_spec)
+        let figure_14_spec = "JPN_API.json";  vegaEmbed('#JPN_API', figure_14_spec)
+        let figure_15_spec = "RUS_API.json";  vegaEmbed('#RUS_API', figure_15_spec)
+        let figure_16_spec = "USA_API.json";  vegaEmbed('#USA_API', figure_16_spec)
 
+        let figure_17_spec = "Task7_Base map.json";  vegaEmbed('#Base_Map', figure_17_spec)
+        let figure_18_spec = "Task7_Interactive Map.json";  vegaEmbed('#Interactive_Map', figure_18_spec)
+
+        let figure_19_spec = "health_exp vs mortality + reg.json";  vegaEmbed('#Task8_Chart1', figure_19_spec)
+
+        let figure_20_spec = "Task9_Chart1.json";  vegaEmbed('#Task9_Chart1', figure_20_spec)
+        let figure_21_spec = "Task9_Chart2.json";  vegaEmbed('#Task9_Chart2', figure_21_spec)
+
+
+        let figure_22_spec = "alc-mortality interactive scatetr plot.json";  vegaEmbed('#Task10_Chart1', figure_22_spec)
+        let figure_23_spec = "Interactive Mortality by region.json";  vegaEmbed('#Task10_Chart2', figure_23_spec)
 
     </script>
 

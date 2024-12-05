@@ -1,0 +1,123 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/MireilleRamez/MireilleRamez.github.io/refs/heads/main/Merged_Healthcare_Mortality_Data.csv",
+    "format": {"type": "csv"}
+  },
+  "width": 700,
+  "height": 400,
+  "title": "Healthcare Spending vs Liver Cancer Mortality Rate (UK vs Germany)",
+  "layer": [
+    {
+      "mark": {"type": "circle"},
+      "encoding": {
+        "x": {
+          "field": "health expenditure",
+          "type": "quantitative",
+          "title": "Healthcare Spending (% of GDP)"
+        },
+        "y": {
+          "field": "Mortality Rate",
+          "type": "quantitative",
+          "title": "Liver Cancer Mortality Rate (per 1000 people)"
+        },
+        "color": {
+          "field": "Country",
+          "type": "nominal",
+          "title": "Country",
+          "scale": {
+            "domain": ["UK", "Germany"],
+            "range": ["#1f77b4", "#ff7f0e"]
+          }
+        },
+        "shape": {
+          "field": "Country",
+          "type": "nominal",
+          "legend": {"title": "Country"},
+          "scale": {"domain": ["UK", "Germany"], "range": ["circle", "square"]}
+        },
+        "size": {"value": 50},
+        "tooltip": [
+          {"field": "Year", "type": "quantitative", "title": "Year"},
+          {"field": "Country", "type": "nominal", "title": "Country"},
+          {
+            "field": "health expenditure",
+            "type": "quantitative",
+            "title": "Healthcare Spending (% of GDP)"
+          },
+          {
+            "field": "Mortality Rate",
+            "type": "quantitative",
+            "title": "Mortality Rate (per 1000 people)"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.Country == 'Germany'"},
+        {
+          "regression": "Mortality Rate",
+          "on": "health expenditure",
+          "extent": [9.8, 12],
+          "groupby": ["Country"]
+        }
+      ],
+      "mark": {"type": "line", "tooltip": true},
+      "encoding": {
+        "x": {
+          "field": "health expenditure",
+          "type": "quantitative",
+          "title": "Healthcare Spending (% of GDP)"
+        },
+        "y": {
+          "field": "Mortality Rate",
+          "type": "quantitative",
+          "title": "Liver Cancer Mortality Rate (per 1000 people)"
+        },
+        "color": {
+          "field": "Country",
+          "type": "nominal",
+          "title": "Country",
+          "scale": {
+            "domain": ["UK", "Germany"],
+            "range": ["#1f77b4", "#ff7f0e"]
+          }
+        }
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.Country == 'UK'"},
+        {
+          "regression": "Mortality Rate",
+          "on": "health expenditure",
+          "groupby": ["Country"]
+        }
+      ],
+      "mark": {"type": "line", "tooltip": true},
+      "encoding": {
+        "x": {
+          "field": "health expenditure",
+          "type": "quantitative",
+          "title": "Healthcare Spending (% of GDP)"
+        },
+        "y": {
+          "field": "Mortality Rate",
+          "type": "quantitative",
+          "title": "Liver Cancer Mortality Rate (per 1000 people)"
+        },
+        "color": {
+          "field": "Country",
+          "type": "nominal",
+          "title": "Country",
+          "scale": {
+            "domain": ["UK", "Germany"],
+            "range": ["#1f77b4", "#ff7f0e"]
+          }
+        }
+      }
+    }
+  ],
+  "config": {}
+}

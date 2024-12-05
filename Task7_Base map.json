@@ -1,0 +1,26 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 600,
+  "data": {
+    "url": "https://raw.githubusercontent.com/MireilleRamez/MireilleRamez.github.io/refs/heads/main/Cancer_Alliances_July_2023_Boundaries_EN_BUC_-8113992691418614215.geojson",
+    "format": {"type": "json", "property": "features"}
+  },
+  "projection": {"type": "identity", "reflectY": true},
+  "layer": [
+    {
+      "mark": {"type": "geoshape", "stroke": "white"},
+      "encoding": {
+        "color": {"value": "#d9d9d9"},
+        "tooltip": [
+          {
+            "field": "properties.CAL23NM",
+            "type": "nominal",
+            "title": "Cancer Alliance"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {}
+}
