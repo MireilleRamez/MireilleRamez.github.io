@@ -1,8 +1,8 @@
-
 <!DOCTYPE html>
-<html> 
-<head>    
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="index.css">
     <title>Data Science Final Project</title> 
 
@@ -13,115 +13,111 @@
     <style>
         #chartGrid {
             display: flex;
+            flex-wrap: wrap;
         }
-        
+        .chart-container {
+            margin: 20px;
+            width: 45%;
+        }
     </style>
 </head>
 
-<body> 
+<body>
 
-    <h1 class="big" style="margin-bottom: 0px;">
-        Mireille Ramez
-    </h1>
-    <p style="margin-top: 0px; color: darkblue">
-       Mireille Ramez Refaat Kamal Messih | <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/">LinkedIn</a> | <a
-            href="https://github.com/MireilleRamez">GitHub</a>
-    </p>
-    <h3 class="small">
-        This page acts as my final project of exploring the relationship between healthcare spending 
-        and the mortality rate of liver cancer patients in the UK vs Germany.
-    </h3>
-
-    <section>
-        <div class="chart-description">
-            <h2>Section 1: Liver cancer Mortality Rates by Country </h2>
-            <p> 
-                Liver cancer Mortality Rates by Country <a href= "https://gco.iarc.fr/today/en/dataviz/bars-compare-populations?mode=cancer&group_populations=1&multiple_populations=1&types=1&populations=250_826&group_crc=0&key=asr&sort_by=value1">Data</a>
-            </p>
-        </div>
-        <figure id="Location1"></figure> 
-    
-    </section>
-
-    <section>
-        <div class="chart-description">
-            <h2>Section 2: Liver Cancer Mortality Rates of UK VS Germany</h2>
-            <p> 
-              UK Liver Cancer Mortality <a href= https://www.cancerresearchuk.org/health-professional/cancer-statistics/statistics-by-cancer-type/liver-cancer/mortality#heading-Two >Data</a>
-            </p>
+    <header>
+        <h1 class="small" style="margin-bottom: 0px;">Exploring the Drivers of Liver Cancer Mortality: A Comparative Study of Healthcare, Alcohol Consumption, and Regional Factors</h1>
+        <p style="margin-top: 0px; color: darkblue">
+            <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/">LinkedIn</a> | 
+            <a href="https://github.com/MireilleRamez">GitHub</a>
         </p>
-              Germany Liver Cancer Mortality <a href= https://www.krebsdaten.de/Krebs/EN/Database/databasequery_step1_node.html >Data</a>
-            </p>
-        </p>
-              Cleaning and merging the UK and Germany timeseries collected data was done using
-              <a href= https://colab.research.google.com/drive/1y2FWTc2BS0IVEinPTyZEAucJ9hU0El00?usp=sharing> Google Colab Notebook</a>
-            </p>
-        </div>
-        <figure id="Location2"></figure> 
-    </section>
+        <h3 class="small">Final Project for Practical Data Science for Economists</h3>
+        <p>ECON-20008_2024_TB_1</p>
+        <p>Student Number: 2656635</p>
+    </header>
 
-    <section>
-        <div class="chart-description">
-            <h2>Section 3: Health Expenditure VS Liver Cancer Mortality Rate</h2>
-            <p> 
-            Health Expenditure as a % of GDP 
-            <a href= https://data-explorer.oecd.org/vis?lc=en&df[ds]=DisseminateArchiveDMZ&df[id]=DF_DP_LIVE&df[ag]=OECD&av=true&pd=1972%2C2024&dq=DEU%2BGBR%2BOECD.HEALTHEXP...A&to[TIME_PERIOD]=false&vw=tb&lb=bt>Data</a>
-            <p> 
-            <p> 
-            Cleaning Health Expenditure Data using 
-            <a href=  https://colab.research.google.com/drive/1t0RFrH2WqpyHRr5sUiPmfo3X2WIgv-qC?usp=sharing>Google Colab Notebook</a>
-            <p> 
-            <p> 
-            Merging Health Expenditure and Mortality Rates using
-            <a href=   https://colab.research.google.com/drive/1cEs693Sc0FBqyTNZ-lW-D4xcHymWXa9P?usp=sharing>Google Colab Notebook</a>
+    <main>
+        <section>
+            <h2>Introduction</h2>
+            <p>This project delves into statistics about liver cancer mortality rates globally, regionally, and subregionally. The aim is to find correlations between liver cancer mortality and other variables such as healthcare spending and alcohol consumption. The project utilizes age-standardized mortality rates to eliminate age bias, providing an accurate comparison across different populations and regions.</p>
+        </section>
 
-            </p>
-        </div>
-        <figure id="Location3"></figure> 
-    </section>
+        <section>
+            <div class="chart-description">
+                <h2>Section 1: Liver Cancer Mortality Rates by Country</h2>
+                <p><strong>Aim:</strong> This section analyzes liver cancer mortality trends across various regions in 2022, using Age-Standardized Mortality Rates (ASR) per 100,000 people for both sexes. The goal is to identify regional differences and explore potential influencing factors.</p>
+                <p><strong>Data:</strong> Liver cancer Mortality Rates by Country <a href="https://gco.iarc.fr/today/en/dataviz/bars-compare-populations?mode=cancer&group_populations=1&multiple_populations=1&types=1&populations=250_826&group_crc=0&key=asr&sort_by=value1">Data</a>, sourced from WHO, covers 12 countries across six regions.</p>
+                <p><strong>Challenges:</strong> Finding up-to-date data and accounting for varying regional classifications were challenges. Additionally, the dataset lacked information on socioeconomic, healthcare, or lifestyle factors.</p>
+                <p><strong>Key Insights:</strong> Countries like Mongolia and Egypt show high mortality rates, while Switzerland and Germany have lower rates, indicating regional disparities. This could be due to gaps in healthcare access.</p>
+                
+            </div>
+            <figure id="Location1" class="chart-container"></figure>
+        </section>
 
-    <section>
-        <div class="chart-description">
-            <h2>Section 4: Alcohol Consumption VS Liver Cancer Mortality Rate</h2>
-            <p> 
-            Alcohol Consumption <a href= https://ourworldindata.org/alcohol-consumption>Data</a>
-            <p> 
-            <p> 
-            Merging Alcohol and mortality data using
-            <a href= https://colab.research.google.com/drive/1KwPhpMM_6uPV_vwA8DjmdS5hzUdpiMUC?usp=sharing>Google Colab Notebook</a>
-            </p>
-        </div>
-        <figure id="Location4"></figure> 
-    </section>
+        <section>
+            <div class="chart-description">
+                <h2>Section 2: Liver Cancer Mortality Rates of UK vs. Germany</h2>
+                <p><strong>Aim:</strong> This section compares liver cancer mortality rates between the UK and Germany, highlighting the influence of their healthcare systems. The UK has a publicly funded system (NHS), while Germany has a universal multi-payer system.</p>
+                <p><strong>Data:</strong> The dataset includes UK Liver Cancer Mortality <a href="https://www.cancerresearchuk.org/health-professional/cancer-statistics/statistics-by-cancer-type/liver-cancer/mortality#heading-Two">Data</a>(1971-2017)</p>
+                <p>and Germany Liver Cancer Mortality <a href="https://www.krebsdaten.de/Krebs/EN/Database/databasequery_step1_node.html">Data</a> (1999-2023)</p>
+                <p>Cleaning and merging the UK and Germany timeseries data were done using <a href="https://colab.research.google.com/drive/1y2FWTc2BS0IVEinPTyZEAucJ9hU0El00?usp=sharing">Google Colab Notebook</a></p>
+                <p><strong>Challenges:</strong> The different time periods for the UK and Germany data complicate direct comparisons. Additionally, lifestyle, demographics, and public health initiatives are not captured in the data.</p>
+                <p><strong>Key Insights:</strong> The UK has seen a consistent increase in mortality rates, while Germany's rates have remained stable.</p>
+                <p> The data suggests that healthcare systems, population aging, and lifestyle changes in the UK may explain the rising mortality rates, while Germany's system may be more stabilizing.</p>
+            </div>
+            <figure id="Location2" class="chart-container"></figure>
+        </section>
 
-    <section>
-        <div class="chart-description">
-            <h2>Section 5: Subregional variation in UK for 5-year Cancer Survival Rates</h2>
-            <p> 
-            UK Cancer Alliances (July 2023) Boundaries EN BUC 
-            <a href= https://www.data.gov.uk/dataset/550aa7e3-ac64-41b1-b91f-299ccaf0a2d4/cancer-alliances-july-2023-boundaries-en-buc>Dataset</a>
-            <p> 
-                <p> 
-            Uk subrigional cancer survival rates
-            <a href= https://digital.nhs.uk/data-and-information/publications/statistical/cancer-survival-in-england/cancers-diagnosed-2015-to-2019-followed-up-to-2020>Data</a>
-            <p> 
-                <p> 
-          Cleaning UK subregional survival rates by region using
-          <a href= https://colab.research.google.com/drive/1uJiVCVJXp2mLYvvYt_Sdjgyj0mQ9e_zr?usp=sharing>Google Colab Notebook</a>
-          <p> 
-            <p> 
-          Throughout the project, I have been looking into Age standardized mortality rates as it exploits
-          But due to data limitations, more data were provided as a non standardised survival rates 
-          so I included a drop down tool where user can choose which
-          measure they want to display
-            </p>
-        </div>
-        <figure id="Location5"></figure> 
-    </section>
+        <section>
+            <div class="chart-description">
+                <h2>Section 3: Health Expenditure vs. Liver Cancer Mortality Rate</h2>
+                <p><strong>Aim:</strong> This section explores the relationship between health expenditure as a percentage of GDP and liver cancer mortality rates in the UK and Germany.</p>
+                <p><strong>Data:</strong> The datasets include liver cancer mortality rates and Health Expenditure as a % of GDP <a href="https://data-explorer.oecd.org/vis?lc=en&df[ds]=DisseminateArchiveDMZ&df[id]=DF_DP_LIVE&df[ag]=OECD&av=true&pd=1972%2C2024&dq=DEU%2BGBR%2BOECD.HEALTHEXP...A&to[TIME_PERIOD]=false&vw=tb&lb=bt">Data</a> for both countries over several decades.</p>
+                <p>Cleaning Health Expenditure Data was done using <a href="https://colab.research.google.com/drive/1t0RFrH2WqpyHRr5sUiPmfo3X2WIgv-qC?usp=sharing">Google Colab Notebook</a></p>
+                <p>Merging Health Expenditure and Mortality Rates was done using <a href="https://colab.research.google.com/drive/1cEs693Sc0FBqyTNZ-lW-D4xcHymWXa9P?usp=sharing">Google Colab Notebook</a></p>
+                <p><strong>Challenges:</strong> Inconsistent reporting periods and confounding factors like healthcare access, lifestyle, and interventions complicate analysis.</p>
+                <p><strong>Key Insights:</strong> Both countries show an increase in health expenditure, but the UK shows a more pronounced increase in mortality rates.</p>
+                <p>Increased health expenditure correlates with higher mortality rates, but other factors like healthcare efficiency, lifestyle, and prevention programs also play a role.</p>
+
+            </div>
+            <figure id="Location3" class="chart-container"></figure>
+        </section>
+
+        <section>
+            <div class="chart-description">
+                <h2>Section 4: Alcohol Consumption vs. Liver Cancer Mortality Rate</h2>
+                <p><strong>Aim:</strong> This section examines the relationship between alcohol consumption and liver cancer mortality rates in Germany and the UK.</p>
+                <p><strong>Data:</strong> Data from <a href="https://ourworldindata.org/alcohol-consumption">Our World in Data</a> (liters of pure alcohol per capita).</p>
+                <p>Merging Alcohol and Mortality Data was done using <a href="https://colab.research.google.com/drive/1KwPhpMM_6uPV_vwA8DjmdS5hzUdpiMUC?usp=sharing">Google Colab Notebook</a></p>
+                <p><strong>Challenges:</strong> Data inconsistency across time periods and limited data points for both countries.</p>
+                <p><strong>Key Insights:</strong> Although alcohol consumption has decreased in both countries, liver cancer mortality in the UK has risen, while Germany's rates have remained stable.</p>
+            </div>
+            <figure id="Location4" class="chart-container"></figure>
+        </section>
+
+        <section>
+            <div class="chart-description">
+                <h2>Section 5: Subregional Variation in the UK for 5-year Cancer Survival Rates</h2>
+                <p><strong>Aim:</strong> This section explores regional variations in 5-year cancer survival rates in the UK, focusing on differences by geographic location and cancer site.</p>
+                <p><strong>Data:</strong> UK Cancer Alliances data (July 2023) and NHS Digital's 5-year Survival Rates <a href="https://www.nhs.uk/conditions/cancer/5-year-survival-rates-for-common-cancers/">Data</a>for cancers diagnosed between 2015 and 2019.</p>
+                <p><strong>Challenges:</strong> Data inconsistencies between regions and discrepancies in reporting methods.</p>
+                <p><strong>Key Insights:</strong> Significant regional variation exists in cancer survival rates, likely driven by differences in healthcare access, socioeconomic factors, and lifestyle.</p>
+            </div>
+            <figure id="Location5" class="chart-container"></figure>
+
+            
+             <p>  In conclusion, this project has provided a comprehensive analysis of liver cancer mortality rates across various countries and regions, while examining factors such as healthcare expenditure, alcohol consumption, and regional variations. </p>
+             <p>    Despite challenges like data inconsistency and limited time spans, the findings highlight significant disparities in liver cancer mortality rates. </p>
+            <p>    The UK's rising mortality rates contrast with Germany's stability, suggesting that healthcare systems and lifestyle factors play critical roles. </p>
+              <p>    Further research is essential to explore the intricate relationships among factors influencing liver cancer mortality; such as socioeconomic background, human behavior, surrounding environment, inherited genetics, and many more. This will help identify targeted prevention strategies. </p>
+
+        
+        </section>
+
+
 
    <script>
       
-        let figure_1_spec = "Chart1.json"; vegaEmbed('#Location1', figure_1_spec) 
+        let figure_1_spec = "Interactive Mortality by region.json"; vegaEmbed('#Location1', figure_1_spec) 
 
         let figure_2_spec = "Chart2.json"; vegaEmbed('#Location2', figure_2_spec)
 
