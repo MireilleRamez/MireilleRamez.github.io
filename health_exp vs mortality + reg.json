@@ -6,7 +6,7 @@
   },
   "width": 700,
   "height": 400,
-  "title": "Healthcare Spending vs Liver Cancer Mortality Rate (UK vs Germany)",
+ 
   "layer": [
     {
       "mark": {"type": "circle"},
@@ -119,5 +119,12 @@
       }
     }
   ],
-  "config": {}
+  "config": {},
+  "title": {
+    "text": "Healthcare Spending VS Liver Cancer Mortality Rate (UK vs Germany)",
+    "anchor": "middle",
+    "fontSize": 16,
+    "fontWeight": "bold"
+  }
 }
+

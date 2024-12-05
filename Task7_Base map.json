@@ -22,5 +22,17 @@
       }
     }
   ],
-  "config": {}
+  "config": {
+    "title": {
+      "text": "Cancer Alliance Boundaries (July 2023)",
+      "anchor": "middle",
+      "fontSize": 20,
+      "font": "Arial",
+      "color": "black",
+      "subtitle": "A visualization of Cancer Alliance regions in the UK",
+      "subtitleFontSize": 14,
+      "subtitleFont": "Arial",
+      "subtitleColor": "gray"
+    }
+  }
 }

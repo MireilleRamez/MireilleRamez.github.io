@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Scatterplot comparing alcohol consumption and mortality rates by country over selected years with interactivity.",
+  
   "data": {
     "url": "https://raw.githubusercontent.com/MireilleRamez/MireilleRamez.github.io/cdb3e545f8991f27d56e1fc21769bab9cb3d6708/alc_mortality.csv",
     "format": {"type": "csv"}
@@ -79,5 +79,11 @@
       }
     }
   ],
-  "config": {}
+  "config": {},
+  "title": {
+    "text": "Alcohol Consumption VS Mortality Rates (UK vs Germany)",
+    "anchor": "middle",
+    "fontSize": 16,
+    "fontWeight": "bold"
+  }
 }

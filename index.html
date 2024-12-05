@@ -1,33 +1,11 @@
-<!-- This HTML file provides a simple example of a portfolio page. It contains a header, a few sections, and a few charts. -->
-<!-- It works with the three css files in this folder: example1.css, example2.css and example3.css. -->
-<!-- The HTML file defines the structure of the page, and the CSS files define how it looks. -->
-<!-- The CSS examples are all designed to work with this page. Try swapping them out on line 29 and see what happens. -->
-
-<!-- Take a look around and make your own copy to adapt for your own use. -->
-
-<!-- This is a comment -->
-<!-- Comments are not displayed in the browser -->
-<!-- They can be used to leave notes in the code -->
-
 <!DOCTYPE html>
-<html> 
-    <!-- HTML is heirarchial: tags like this define elements on the page. 
-    Each tag does something different. For example:
-        - The <html> tag defines the whole document.
-        - The <h1> tag defines a large heading
-        - The <p> tag defines a paragraph
-        - Tags appear as an opening <div> and closing </div> pair
-    -->
+<html>
 
-<head>    
-    <!-- The head tag links to resources our page needs and defines information about it. Tags in the <head> aren't displayed on the page. -->
-
-    <!-- This is a link to a stylesheet which contains rules about how each element on the page should be defined-->
-    <!-- Try swapping example1.css to another, and take a look at example1.css to see if you understand it-->
+<head>
     <link rel="stylesheet" type="text/css" href="index.css">
-    <title>My Portfolio</title> <!-- The title displayed in the browser tab, not on the page itself -->
+    <title>My Portfolio</title>
 
-    <!-- This is a link to the vega-lite which we're using to make graphs -->
+    <!-- Linking Vega-Lite libraries for graphing -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
@@ -36,180 +14,181 @@
         #chartGrid {
             display: flex;
         }
-        
     </style>
 </head>
 
-<body> 
-<!-- The body tag contains the elements that visitors to our page will see. -->
-    <h1 class="big" style="margin-bottom: 0px;"> <!-- We have added a class to the header called "big" which we can use to style it in the CSS -->
-        <!-- This is a header, it is the largest text on the page -->
-        MireilleRamez
+<body>
+    <h1 class="big" style="margin-bottom: 0px;">
+        Mireille Ramez
     </h1>
     <p style="margin-top: 0px; color: darkblue">
-        <!-- we're setting the margin to 0px so the header and authour name are close together -->
-       Mireille Ramez Refaat Kamal Messih | <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/">LinkedIn</a> | <a
+        Mireille Ramez Refaat Kamal Messih | <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/">LinkedIn</a> | <a
             href="https://github.com/MireilleRamez">GitHub</a>
     </p>
-    <h3 class="small"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
+    <h3 class="small">
         This page acts as my portfolio of charts.
     </h3>
 
-    <!-- We're organising the page into sections, with each section containing a chart, title and a description -->
+    <!-- Portfolio Task 1: A basic chart -->
     <section>
         <div class="chart-description">
-            <h2>Section 1: A basic chart</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
+            <h2>Portfolio Task 1: A basic chart</h2>
+            <p>
+                We've organized the page into sections, with each section containing a chart, title, and description. 
+                Here, we can describe the chart and give some context. As a first example, we're using a basic chart from our repo.
             </p>
         </div>
-        <figure id="Location1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <figure id="Location1"></figure>
         <figure id="RD1"></figure>
         <figure id="RD2"></figure>
     </section>
 
+    <!-- Portfolio Task 2: Egypt's Employment Chart -->
     <section>
         <div class="chart-description">
-            <h2>Section 2: Portfolio Task 2: Egypt's Employment Chart</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                Egypt's Employment Chart
-            </p>
+            <h2>Portfolio Task 2: Egypt's Employment Chart</h2>
+            <p> Egypt's Employment Chart </p>
         </div>
-        <figure id="Location2"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <figure id="Location2"></figure>
     </section>
 
+    <!-- Portfolio Task 3: Economics Festival Topic Discussion -->
     <section>
         <div class="chart-description">
-            <h2>Section 3: Week 3 Portfolio Task: Economics Festival Topic Discussion </h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                At the economics festival, a key discussion addressed whether GDP growth correlates with decreased sustainability due to increased production. 
-                To investigate this, I analyzed U.S. data on industrial production and CO2 emissions from 1973 to 2022.
-                The data shows that while industrial production significantly increased during this period, CO2 emissions actually decreased. 
-                This suggests that GDP growth does not inherently lead to lower sustainability.
-                A possible explanation is the advancement of technology in industrial processes, allowing for greater output with reduced environmental impact. 
-                This challenges the assumption that economic growth must compromise sustainability. 
+            <h2>Portfolio Task 3: Economics Festival Topic Discussion </h2>
+            <p>
+                At the economics festival, a key discussion addressed whether GDP growth correlates with decreased sustainability due to increased production. To investigate this, I analyzed U.S. data on industrial production and CO2 emissions from 1973 to 2022. The data shows that while industrial production significantly increased during this period, CO2 emissions actually decreased. This suggests that GDP growth does not inherently lead to lower sustainability. A possible explanation is the advancement of technology in industrial processes, allowing for greater output with reduced environmental impact. This challenges the assumption that economic growth must compromise sustainability.
             </p>
         </div>
-        <figure id="Location3_1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
-        <figure id="Location3_2"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <figure id="Location3_1"></figure>
+        <figure id="Location3_2"></figure>
     </section>
 
+    <!-- Portfolio Task 4: Replication, Re-create, then improve, someone else’s chart -->
     <section>
         <div class="chart-description">
-            <h2>Section 4: Week 4 Portfolio Task</h2>
-            <p> 
-                The tast is to replicate a misguiding published chart, and then improve it. 
-                A photo of the Original Chart is displayed along with the one I replicated, followed by the mofidifed chart I did
-                Modifications basically included changing the scale of the bar chart in order to have a well visualized bar, having the bar length reflecting the numebr of likes. 
-                It also highlighted the top bar alond with its axis label to point out to the largest number of likes. 
-                Additionally, I changed the color of the bars from orange to blue.
+            <h2>Portfolio Task 4: Replication, Re-create, then improve, someone else’s chart.</h2>
+            <p>
+                The task is to replicate a misguiding published chart, and then improve it. A photo of the Original Chart is displayed along with the one I replicated, followed by the modified chart I created. Modifications included changing the scale of the bar chart to have better visualization and making the bar length reflect the number of likes. Additionally, I highlighted the top bar along with its axis label to emphasize the largest number of likes and changed the color of the bars from orange to blue.
             </p>
         </div>
-        <p> 
-            Original Photo of chart to be replicated
-         </p>
-        <img src="Original_photo.png"> </img>
-
-        <p> 
-            Replicated Chart
-         </p>
-        <figure id="Original"></figure> 
-
-        <p> 
-           Modified Chart
-         </p>
-        <figure id="Modified"></figure> 
+        <p>Original Photo of chart to be replicated</p>
+        <img src="Original_photo.png" alt="Original Chart">
+        <p>Replicated Chart</p>
+        <figure id="Original"></figure>
+        <p>Modified Chart</p>
+        <figure id="Modified"></figure>
     </section>
 
+    <!-- Portfolio Task 5: Scraping Data from a website -->
     <section>
         <div class="chart-description">
-            <h2>Section 5: Week 5 Portfolio Task: Scraping Data from a website</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                I chose to scrape data about the healthcare spending as a percentage of GDP per country.
-                Here's the wikipedia link from which I got the data:
-                "https://en.wikipedia.org/wiki/Health_spending_as_percent_of_gross_domestic_product_(GDP)_by_country"
-                Then I normalised the data into a long format using google colab: 
-                "https://colab.research.google.com/drive/1YB_3v3Wyc9ai-DkVp6HV0imjL2uZuH09?usp=sharing", then I exported it into csv file.
-                Afterwards I created a chart on Vega-Light using the scraped data, which is displayed below
+            <h2>Portfolio Task 5: Scraping Data from a website</h2>
+            <p>
+                I chose to scrape data about healthcare spending as a percentage of GDP per country. Source: <a href="https://en.wikipedia.org/wiki/Health_spending_as_percent_of_gross_domestic_product_(GDP)_by_country">Wikipedia</a> 
+            </p>
+            <p>
+                Then, I normalized the data into a long format on <a href="https://colab.research.google.com/drive/1YB_3v3Wyc9ai-DkVp6HV0imjL2uZuH09?usp=sharing">Google Colab</a> and exported it into a CSV file. 
+                Finally, I created a chart on Vega-Lite using the scraped data, filtered for only seven countries for better visualization.
             </p>
         </div>
-        <figure id="Scraped"></figure> 
+        <figure id="Scraped"></figure>
     </section>
 
+    <!-- Portfolio Task 6: API Loop -->
     <section>
         <div class="chart-description">
-            <h2>Section 6: Week 6 Portfolio Task: API</h2>
-            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                I chose to create an API loop for constant GDP of 9 countries. I used FRED API to extract the data
-                Here's the google colab notebook link used to generate the 9 charts
-            https://colab.research.google.com/drive/1Lp4NVGgdw-6jipCHM4v6qIQrl7QplAJ6?usp=sharing
+            <h2>Portfolio Task 6: API Loop</h2>
+            <p>
+                I created an API loop for constant GDP data of 9 countries using the FRED API to extract the data and generate the 9 charts. 
+                For details, refer to <a href="https://colab.research.google.com/drive/1Lp4NVGgdw-6jipCHM4v6qIQrl7QplAJ6?usp=sharing">Google Colab</a>.
             </p>
         </div>
-        <figure id="GBR_API"></figure> 
-        <figure id="FRA_API"></figure> 
-        <figure id="EGY_API"></figure> 
-        <figure id="DEU_API"></figure> 
-        <figure id="CAN_API"></figure> 
-        <figure id="AUS_API"></figure> 
-        <figure id="JPN_API"></figure> 
-        <figure id="RUS_API"></figure> 
-        <figure id="USA_API"></figure> 
-    </section>
-     
-    <section>
-        <div class="chart-description">
-            <h2>Section 7: Week 7 Portfolio Task: Map</h2>
-            <p> 
-               I created a Map for the percentage of survival of different cancer types in the UK regions
-               Data extracted from:
-               https://digital.nhs.uk/data-and-information/publications/statistical/cancer-survival-in-england/cancers-diagnosed-2015-to-2019-followed-up-to-2020
-               Data cleaned through this google colab notebook:
-               https://colab.research.google.com/drive/1uJiVCVJXp2mLYvvYt_Sdjgyj0mQ9e_zr?usp=sharing
-               Boundaries data are extracted from :
-               https://www.data.gov.uk/dataset/550aa7e3-ac64-41b1-b91f-299ccaf0a2d4/cancer-alliances-july-2023-boundaries-en-buc
-            </p>
-        </div>
-        <figure id="Base_Map"></figure> 
-        <figure id="Interactive_Map"></figure> 
+        <figure id="GBR_API"></figure>
+        <figure id="FRA_API"></figure>
+        <figure id="EGY_API"></figure>
+        <figure id="DEU_API"></figure>
+        <figure id="CAN_API"></figure>
+        <figure id="AUS_API"></figure>
+        <figure id="JPN_API"></figure>
+        <figure id="RUS_API"></figure>
+        <figure id="USA_API"></figure>
     </section>
 
+    <!-- Portfolio Task 7: Maps. Base maps and choropleths -->
     <section>
         <div class="chart-description">
-            <h2>Section 8: Week 8 Portfolio Task: Advanced Charts</h2>
-            <p> 
-             For this task, I used the chart I created for the project visualizong the Healthcare Expenditure VS Cancer Mortality Rate in a scatter plot, 
-             and added a regression line for better analysis and discussion
+            <h2>Portfolio Task 7: Maps. Base maps and choropleths</h2>
+            <p>
+                The Base Map was created according to the cancer alliance boundaries which are sourced from <a href="https://www.data.gov.uk/dataset/550aa7e3-ac64-41b1-b91f-299ccaf0a2d4/cancer-alliances-july-2023-boundaries-en-buc">this dataset</a>.
             </p>
-        </div>
-        <figure id="Task8_Chart1"></figure> 
-        <figure id="Task8_Chart2"></figure> 
+            <figure id="Base_Map"></figure>
+            <p>
+            
+                Then I layered on top of the base map, the percentage of survival of different cancer types in UK regions using data from <a href="https://digital.nhs.uk/data-and-information/publications/statistical/cancer-survival-in-england/cancers-diagnosed-2015-to-2019-followed-up-to-2020">this source</a>. The data was cleaned through <a href="https://colab.research.google.com/drive/1uJiVCVJXp2mLYvvYt_Sdjgyj0mQ9e_zr?usp=sharing">Google Colab</a>
+       </p>
+    </div>
+        <figure id="Interactive_Map"></figure>
     </section>
 
+    <!-- Portfolio Task 8: Advanced Charts -->
     <section>
         <div class="chart-description">
-            <h2>Section 9: Week 9 Portfolio Task: Big Data</h2>
-            <p> 
-                https://drive.google.com/file/d/1YdCL9HBEFuvHd3GFGpKIS-_LpAT-e1n7/view?usp=sharing
-
+            <h2>Portfolio Task 8: Advanced Charts</h2>
+            <p>
+                For this task, I visualized the Healthcare Expenditure versus Cancer Mortality Rate in a scatter plot, and added a regression line for better analysis. 
+                Additionally, I created a bubble chart with variables such as Labor force participation rate, Constant GDP, and Liver Cancer Mortality Rate.
+                Data sources: <a href="https://www.cancerresearchuk.org/health-professional/cancer-statistics/statistics-by-cancer-type/liver-cancer/mortality#heading-Two">Liver Cancer Mortality Rate</a>, <a href="https://data-explorer.oecd.org/vis?lc=en&tm=DF_LFS_INDIC&pg=0&snb=1&vw=tb&df[ds]=dsDisseminateFinalDMZ&df[id]=DSD_LFS%40DF_LFS_INDIC&df[ag]=OECD.ELS.SAE&df[vs]=&pd=1972%2C2023&dq=GBR%2BDEU.LF_RATE.PT_POP_SUB._T.Y15T74.&to[TIME_PERIOD]=false&lb=bt">Labor Force Participation Rate</a>.
             </p>
+            <figure id="Task8_Chart1"></figure>
+            <figure id="Task8_Chart2"></figure>
         </div>
-        <figure id="Task9_Chart1"></figure> 
-        <figure id="Task9_Chart2"></figure> 
     </section>
 
+    <!-- Portfolio Task 9: Big Data -->
     <section>
         <div class="chart-description">
-            <h2>Section 10: Week 10 Portfolio Task: Interactive Chart</h2>
-            <p> 
-             For this portfolio task, I added interactivity to one of the charts used in my project where it displayed the relationship between
-             alcohol consumption and liver cancer moriality rates in a scatter plot and the interactivity elements connects points together 
-             as the mouse hang over the points
-            </p>
-        </div>
-        <figure id="Task10_Chart1"></figure> 
-        <figure id="Task10_Chart2"></figure> 
-    </section>
+            <h2>Portfolio Task 9: Big Data</h2>
+            <p>
+            For the Big Data task; I used this <a href=https://drive.google.com/file/d/1YdCL9HBEFuvHd3GFGpKIS-_LpAT-e1n7/view?usp=sharing> Google Colab Notebook </a> to generate 2 charts:
+        </p>
+    </div>
+    <p> 
+The 1st chart is the most recent price for Malted Choco sweets by store", steps included cleaning the data by keeping the most recent price for each store-product pair
+and adds a "Store" label to the store_id. 
+    <figure id="Task9_Chart1"></figure> 
+    <p> 
+        The 2nd chart shows the percentage of products under 5 pounds in each store.
+        This is done by calculating the percentage of prices under £5 for each store by iterating through unique stores, 
+        counting the total prices and the ones under £5, then calculating the percentage. 
+    
+                 </p>
+    <figure id="Task9_Chart2"></figure> 
+</section>
+
+<section>
+    <div class="chart-description">
+        <h2>Portfolio Task 10: Interactive Chart</h2>
+        
+            <p> For this portfolio task, I used two of the charts created for my project </p>
+                <p> the first one displays the relationship between alcohol consumption and liver cancer moriality rates in a </p>
+                    <p> scatter plot and the interactivity elements connects points together as the mouse hovers the points</p>
+                            <p> Datasets:</p>
+                                <p> Alcohol consumption <a href="https://ourworldindata.org/alcohol-consumption">Dataset</a> in liters of pure alcohol per capita.</p>
+                                <p> Merging Alcohol and Mortality Data was done using <a href="https://colab.research.google.com/drive/1KwPhpMM_6uPV_vwA8DjmdS5hzUdpiMUC?usp=sharing">Google Colab Notebook</a></p>
+        
+    </div>
+    <figure id="Task10_Chart1"></figure> 
+    <p>
+        The second interactive chart used is a bar chart with Liver Cancer Mortality data for different countries.
+        <p>The interactive element is a drop down with regions to choose form</p>
+        <p> Dataset: Liver cancer Mortality Rates by Country <a href="https://gco.iarc.fr/today/en/dataviz/bars-compare-populations?mode=cancer&group_populations=1&multiple_populations=1&types=1&populations=250_826&group_crc=0&key=asr&sort_by=value1">Dataset</a>, sourced from WHO.</p>
+
+    </p>
+    <figure id="Task10_Chart2"></figure> 
+</section>
+
+
 
     <script>
 
@@ -245,13 +224,14 @@
         let figure_18_spec = "Task7_Interactive Map.json";  vegaEmbed('#Interactive_Map', figure_18_spec)
 
         let figure_19_spec = "health_exp vs mortality + reg.json";  vegaEmbed('#Task8_Chart1', figure_19_spec)
+        let figure_20_spec = "Task8_Chart2";  vegaEmbed('#Task8_Chart2', figure_20_spec)
 
-        let figure_20_spec = "Task9_Chart1.json";  vegaEmbed('#Task9_Chart1', figure_20_spec)
-        let figure_21_spec = "Task9_Chart2.json";  vegaEmbed('#Task9_Chart2', figure_21_spec)
+        let figure_21_spec = "Task9_Chart1.json";  vegaEmbed('#Task9_Chart1', figure_21_spec)
+        let figure_22_spec = "Task9_Chart2.json";  vegaEmbed('#Task9_Chart2', figure_22_spec)
 
 
-        let figure_22_spec = "alc-mortality interactive scatetr plot.json";  vegaEmbed('#Task10_Chart1', figure_22_spec)
-        let figure_23_spec = "Interactive Mortality by region.json";  vegaEmbed('#Task10_Chart2', figure_23_spec)
+        let figure_23_spec = "alc-mortality interactive scatetr plot.json";  vegaEmbed('#Task10_Chart1', figure_23_spec)
+        let figure_24_spec = "Interactive Mortality by region.json";  vegaEmbed('#Task10_Chart2', figure_24_spec)
 
     </script>
 

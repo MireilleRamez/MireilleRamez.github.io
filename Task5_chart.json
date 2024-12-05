@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Line chart for Value over time for different Locations with a label for the United States.",
+  "description": "Line chart for Constant Real GDP Value over time for different Countries.",
   "width": 800,
   "height": 500,
   "data": {
@@ -9,7 +9,10 @@
   },
   "transform": [
     {"filter": "datum.Value !== ''"},
-    {"calculate": "parseFloat(datum.Value)", "as": "Value"}
+    {"calculate": "parseFloat(datum.Value)", "as": "Value"},
+    {
+      "filter": "datum.Location == 'United States' || datum.Location == 'Canada' || datum.Location == 'Germany' || datum.Location == 'France' || datum.Location == 'United Kingdom' || datum.Location == 'Australia' || datum.Location == 'Japan'"
+    }
   ],
   "layer": [
     {
@@ -58,5 +61,17 @@
       }
     }
   ],
-  "config": {}
+  "config": {
+    "title": {
+      "text": "Constant Real GDP Value Over Time for Selected Countries",
+      "anchor": "middle",
+      "fontSize": 20,
+      "font": "Arial",
+      "color": "black",
+      "subtitle": "Comparing GDP trends for the United States, Canada, Germany, France, United Kingdom, Australia, and Japan",
+      "subtitleFontSize": 14,
+      "subtitleFont": "Arial",
+      "subtitleColor": "gray"
+    }
+  }
 }

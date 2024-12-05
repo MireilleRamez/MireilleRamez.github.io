@@ -1,6 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "UK vs Germany Age Standardized Mortality Rates",
   "data": {
     "url": "https://raw.githubusercontent.com/MireilleRamez/MireilleRamez.github.io/refs/heads/main/Merged_Mortality_Data.csv"
   },
@@ -36,5 +35,11 @@
       }
     ]
   },
-  "config": {}
+  "config": {},
+  "title": {
+    "text": "UK VS Germany Timeseries Age Standardized Mortality Rates",
+    "anchor": "middle",
+    "fontSize": 16,
+    "fontWeight": "bold"
+  }
 }

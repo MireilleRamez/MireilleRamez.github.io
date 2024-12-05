@@ -6,9 +6,8 @@
   "title": {
     "text": "5-Year Cancer Survival Rates by Region in the UK",
     "subtitle": "Age-standardised and Non-standardised Survival Rates for Selected Cancer Types",
-    "fontSize": 20,
-    "subtitleFontSize": 14,
-    "anchor": "start",
+    "fontSize": 16,
+    "subtitleFontSize": 12,
     "align": "center"
   },
   "layer": [

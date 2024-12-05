@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "A bar chart with data, grouped by region and shaded in blue.",
+  "description": "Liver Cancer Mortality Data for Different Countries",
   "data": {
     "url": "https://raw.githubusercontent.com/MireilleRamez/MireilleRamez.github.io/refs/heads/main/Age-Standardized%20Rate%20(World)%20per%20100%20000%2C%20Mortality%2C%20Both%20sexes%2C%20in%202022.csv"
   },
@@ -17,6 +17,7 @@
     "color": {
       "field": "Region",
       "type": "nominal",
+      "title": "Mortality Rate (Per 1,000)",
       "scale": {"scheme": "pastel1"}
     },
     "tooltip": [
@@ -45,5 +46,11 @@
     }
   ],
   "transform": [{"filter": "Region=='All options' | datum.Region == Region"}],
-  "config": {}
+  "config": {},
+  "title": {
+    "text": "Age-Standardized Liver Cancer Mortality Rates by Country and Region (2022)",
+    "anchor": "middle",
+    "fontSize": 16,
+    "fontWeight": "bold"
+  }
 }
